@@ -1,0 +1,40 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             Title="Music App"
+             x:Class="MusicApp.MainPage"
+             BackgroundColor="#580B0B">
+    <VerticalStackLayout>
+        <Frame BackgroundColor="#802F2F" BorderColor="#802F2F" CornerRadius="15" WidthRequest="342" HeightRequest="42" Margin="30" Padding="10,0">
+            <Entry Placeholder="Wyszukaj utwór.." TextColor="#FDE4E4" PlaceholderColor="#FDE4E4"/>
+        </Frame>
+
+        <Label Text="Popularne:" FontSize="36" TextColor="#E2D0D0" FontFamily="RedRose"/>
+        <ScrollView Orientation="Horizontal" HeightRequest="200">
+            <StackLayout Orientation="Horizontal" Spacing="15">
+                <Image Source="okladka1.png" WidthRequest="170" HeightRequest="170" Aspect="AspectFill" Margin="10"/>
+                <Image Source="okladka2.png" WidthRequest="170" HeightRequest="170" Aspect="AspectFill" Margin="10"/>
+                <Image Source="okladka3.png" WidthRequest="170" HeightRequest="170" Aspect="AspectFill" Margin="10"/>
+            </StackLayout>
+        </ScrollView>
+
+        <Grid ColumnDefinitions="30, *, *">
+            <Frame WidthRequest="346" HeightRequest="47" BackgroundColor="#E2D0D0" Padding="5,5" CornerRadius="30" Grid.Column="1" Margin="20">
+                <Label Text="Dostępne utwory:" FontSize="24" TextColor="#580B0B" HorizontalOptions="Center" FontFamily="RedRose"/>
+            </Frame>
+        </Grid>
+
+        <ScrollView>
+            <Grid Padding="5" ColumnDefinitions="50,*">
+                <Image Source="okladka1.png" WidthRequest="61" HeightRequest="61"/>
+                <StackLayout Grid.Column="1" Padding="10,0">
+                    <Label Text="Tytuł utworu" TextColor="#E2D0D0" FontSize="24" FontFamily="RedRose"/>
+                    <Label Text="Nazwa wykonawcy" TextColor="#E2D0D0" FontSize="14" FontFamily="RedRose"/>
+                </StackLayout>
+            </Grid>
+        </ScrollView>
+        
+                
+    </VerticalStackLayout>
+
+</ContentPage>
